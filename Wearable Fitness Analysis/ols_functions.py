@@ -74,7 +74,7 @@ def ols_model(x, y, return_details=False):
         else:
             raise TypeError("x must be a DataFrame or Series.")
     
-        #print(f"Converted Series to DataFrame with shape {X_processed.dropna().shape}")
+        print(f"Converted Series to DataFrame with shape {X_processed.dropna().shape}")
 
     X_processed = X_processed.dropna()
     X_train, X_test, y_train, y_test = train_test_split(StandardScaler(with_std=False).fit_transform(X_processed), 
